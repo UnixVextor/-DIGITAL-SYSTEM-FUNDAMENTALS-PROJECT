@@ -1,0 +1,776 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.68 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.68 secs
+ 
+--> Reading design: FPGA2.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FPGA2.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FPGA2"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : FPGA2
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "D:\Digital Project\FPGA2\div2MHZ.vhd" into library work
+Parsing entity <div2MHZ>.
+Parsing architecture <Behavioral> of entity <div2mhz>.
+Parsing VHDL file "D:\Digital Project\FPGA2\div200Hz.vhd" into library work
+Parsing entity <div200HZ>.
+Parsing architecture <Behavioral> of entity <div200hz>.
+Parsing VHDL file "D:\Digital Project\FPGA2\servo_pwm.vhd" into library work
+Parsing entity <servo_pwm>.
+Parsing architecture <Behavioral> of entity <servo_pwm>.
+Parsing VHDL file "D:\Digital Project\FPGA2\servo_bullet.vhd" into library work
+Parsing entity <servo_bullet>.
+Parsing architecture <Behavioral> of entity <servo_bullet>.
+Parsing VHDL file "D:\Digital Project\FPGA2\FPGA2.vhd" into library work
+Parsing entity <FPGA2>.
+Parsing architecture <Behavioral> of entity <fpga2>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <FPGA2> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <servo_pwm> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <div200HZ> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <div2MHZ> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <servo_pwm> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <servo_bullet> (architecture <Behavioral>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <FPGA2>.
+    Related source file is "D:\Digital Project\FPGA2\FPGA2.vhd".
+    Summary:
+	no macro.
+Unit <FPGA2> synthesized.
+
+Synthesizing Unit <servo_pwm_1>.
+    Related source file is "D:\Digital Project\FPGA2\servo_pwm.vhd".
+        value = 50
+    Found 1-bit register for signal <spwm>.
+    Found 9-bit register for signal <PWMPERIOD>.
+    Found 12-bit register for signal <COUNT>.
+    Found 12-bit adder for signal <COUNT[11]_GND_4_o_add_1_OUT> created at line 92.
+    Found 9-bit adder for signal <PWMPERIOD[8]_GND_4_o_add_7_OUT> created at line 132.
+    Found 9-bit subtractor for signal <GND_4_o_GND_4_o_sub_11_OUT<8:0>> created at line 143.
+    Found 12-bit comparator greater for signal <n0000> created at line 88
+    Found 12-bit comparator lessequal for signal <n0005> created at line 104
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <servo_pwm_1> synthesized.
+
+Synthesizing Unit <div200HZ>.
+    Related source file is "D:\Digital Project\FPGA2\div200Hz.vhd".
+        fin = 20000000
+        fout = 100000
+    Found 1-bit register for signal <qs>.
+    Found 8-bit register for signal <COUNT>.
+    Found 8-bit adder for signal <COUNT[7]_GND_5_o_add_1_OUT> created at line 61.
+    Found 8-bit comparator greater for signal <n0000> created at line 54
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <div200HZ> synthesized.
+
+Synthesizing Unit <div2MHZ>.
+    Related source file is "D:\Digital Project\FPGA2\div2MHZ.vhd".
+        fin = 20000000
+        fout = 10
+    Found 1-bit register for signal <qs>.
+    Found 21-bit register for signal <COUNT>.
+    Found 21-bit adder for signal <COUNT[20]_GND_6_o_add_1_OUT> created at line 62.
+    Found 21-bit comparator greater for signal <n0000> created at line 55
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <div2MHZ> synthesized.
+
+Synthesizing Unit <servo_pwm_2>.
+    Related source file is "D:\Digital Project\FPGA2\servo_pwm.vhd".
+        value = 80
+    Found 1-bit register for signal <spwm>.
+    Found 9-bit register for signal <PWMPERIOD>.
+    Found 12-bit register for signal <COUNT>.
+    Found 12-bit adder for signal <COUNT[11]_GND_7_o_add_1_OUT> created at line 92.
+    Found 9-bit adder for signal <PWMPERIOD[8]_GND_7_o_add_7_OUT> created at line 132.
+    Found 9-bit subtractor for signal <GND_7_o_GND_7_o_sub_11_OUT<8:0>> created at line 143.
+    Found 12-bit comparator greater for signal <n0000> created at line 88
+    Found 12-bit comparator lessequal for signal <n0005> created at line 104
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  22 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <servo_pwm_2> synthesized.
+
+Synthesizing Unit <servo_bullet>.
+    Related source file is "D:\Digital Project\FPGA2\servo_bullet.vhd".
+        value = 150
+    Found 2-bit register for signal <spwm>.
+    Found 12-bit register for signal <COUNT>.
+    Found 12-bit adder for signal <COUNT[11]_GND_8_o_add_1_OUT> created at line 94.
+    Found 12-bit comparator greater for signal <n0000> created at line 90
+    Found 12-bit comparator lessequal for signal <n0005> created at line 106
+    Found 12-bit comparator lessequal for signal <n0007> created at line 116
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <servo_bullet> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 10
+ 12-bit adder                                          : 3
+ 21-bit adder                                          : 2
+ 8-bit adder                                           : 3
+ 9-bit addsub                                          : 2
+# Registers                                            : 18
+ 1-bit register                                        : 7
+ 12-bit register                                       : 3
+ 2-bit register                                        : 1
+ 21-bit register                                       : 2
+ 8-bit register                                        : 3
+ 9-bit register                                        : 2
+# Comparators                                          : 12
+ 12-bit comparator greater                             : 3
+ 12-bit comparator lessequal                           : 4
+ 21-bit comparator greater                             : 2
+ 8-bit comparator greater                              : 3
+# Multiplexers                                         : 1
+ 1-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <div200HZ>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <div200HZ> synthesized (advanced).
+
+Synthesizing (advanced) Unit <div2MHZ>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <div2MHZ> synthesized (advanced).
+
+Synthesizing (advanced) Unit <servo_bullet>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <servo_bullet> synthesized (advanced).
+
+Synthesizing (advanced) Unit <servo_pwm_1>.
+The following registers are absorbed into accumulator <PWMPERIOD>: 1 register on signal <PWMPERIOD>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <servo_pwm_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <servo_pwm_2>.
+The following registers are absorbed into accumulator <PWMPERIOD>: 1 register on signal <PWMPERIOD>.
+The following registers are absorbed into counter <COUNT>: 1 register on signal <COUNT>.
+Unit <servo_pwm_2> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 8
+ 12-bit up counter                                     : 3
+ 21-bit up counter                                     : 2
+ 8-bit up counter                                      : 3
+# Accumulators                                         : 2
+ 9-bit updown accumulator                              : 2
+# Registers                                            : 9
+ Flip-Flops                                            : 9
+# Comparators                                          : 12
+ 12-bit comparator greater                             : 3
+ 12-bit comparator lessequal                           : 4
+ 21-bit comparator greater                             : 2
+ 8-bit comparator greater                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <FPGA2> ...
+
+Optimizing unit <servo_pwm_1> ...
+
+Optimizing unit <servo_pwm_2> ...
+
+Optimizing unit <servo_bullet> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FPGA2, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 129
+ Flip-Flops                                            : 129
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : FPGA2.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 487
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 94
+#      LUT2                        : 80
+#      LUT3                        : 12
+#      LUT4                        : 29
+#      LUT5                        : 18
+#      LUT6                        : 31
+#      MUXCY                       : 104
+#      MUXF7                       : 5
+#      VCC                         : 1
+#      XORCY                       : 102
+# FlipFlops/Latches                : 129
+#      FD                          : 87
+#      FDE                         : 18
+#      FDR                         : 24
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 6
+#      OBUF                        : 5
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             129  out of  11440     1%  
+ Number of Slice LUTs:                  274  out of   5720     4%  
+    Number used as Logic:               274  out of   5720     4%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    276
+   Number with an unused Flip Flop:     147  out of    276    53%  
+   Number with an unused LUT:             2  out of    276     0%  
+   Number of fully used LUT-FF pairs:   127  out of    276    46%  
+   Number of unique control sets:         9
+
+IO Utilization: 
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    102    11%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)           | Load  |
+-----------------------------------+---------------------------------+-------+
+CLK                                | BUFGP                           | 71    |
+servoXDirectin/CLOK10HZ/qs         | NONE(servoXDirectin/PWMPERIOD_8)| 9     |
+servoXDirectin/CLOK100kHZ/qs       | NONE(servoXDirectin/spwm)       | 13    |
+servoZDirectin/CLOK10HZ/qs         | NONE(servoZDirectin/PWMPERIOD_8)| 9     |
+servoZDirectin/CLOK100kHZ/qs       | NONE(servoZDirectin/spwm)       | 13    |
+servoBullet/CLOK100kHZ/qs          | NONE(servoBullet/spwm_1)        | 14    |
+-----------------------------------+---------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.809ns (Maximum Frequency: 262.550MHz)
+   Minimum input arrival time before clock: 4.511ns
+   Maximum output required time after clock: 4.484ns
+   Maximum combinational path delay: 5.385ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 3.809ns (frequency: 262.550MHz)
+  Total number of paths / destination ports: 1678 / 95
+-------------------------------------------------------------------------
+Delay:               3.809ns (Levels of Logic = 4)
+  Source:            servoXDirectin/CLOK10HZ/COUNT_11 (FF)
+  Destination:       servoXDirectin/CLOK10HZ/COUNT_20 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: servoXDirectin/CLOK10HZ/COUNT_11 to servoXDirectin/CLOK10HZ/COUNT_20
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.447   0.981  servoXDirectin/CLOK10HZ/COUNT_11 (servoXDirectin/CLOK10HZ/COUNT_11)
+     LUT6:I0->O            1   0.203   0.000  servoXDirectin/CLOK10HZ/n0000_inv2_SW1_F (N50)
+     MUXF7:I0->O           3   0.131   0.651  servoXDirectin/CLOK10HZ/n0000_inv2_SW1 (N21)
+     LUT6:I5->O           11   0.205   0.883  servoXDirectin/CLOK10HZ/n0000_inv3 (servoXDirectin/CLOK10HZ/n0000_inv)
+     LUT2:I1->O            1   0.205   0.000  servoXDirectin/CLOK10HZ/COUNT_20_rstpot (servoXDirectin/CLOK10HZ/COUNT_20_rstpot)
+     FD:D                      0.102          servoXDirectin/CLOK10HZ/COUNT_20
+    ----------------------------------------
+    Total                      3.809ns (1.293ns logic, 2.516ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'servoXDirectin/CLOK10HZ/qs'
+  Clock period: 3.468ns (frequency: 288.330MHz)
+  Total number of paths / destination ports: 70 / 9
+-------------------------------------------------------------------------
+Delay:               3.468ns (Levels of Logic = 3)
+  Source:            servoXDirectin/PWMPERIOD_8 (FF)
+  Destination:       servoXDirectin/PWMPERIOD_8 (FF)
+  Source Clock:      servoXDirectin/CLOK10HZ/qs rising
+  Destination Clock: servoXDirectin/CLOK10HZ/qs rising
+
+  Data Path: servoXDirectin/PWMPERIOD_8 to servoXDirectin/PWMPERIOD_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.447   1.147  servoXDirectin/PWMPERIOD_8 (servoXDirectin/PWMPERIOD_8)
+     LUT6:I1->O            1   0.203   0.580  servoXDirectin/Maccum_PWMPERIOD_cy<5>12_SW5_F (N56)
+     LUT3:I2->O            1   0.205   0.580  servoXDirectin/Maccum_PWMPERIOD_cy<5>12_SW51 (N36)
+     LUT6:I5->O            1   0.205   0.000  servoXDirectin/Maccum_PWMPERIOD_xor<8>11 (servoXDirectin/Result<8>)
+     FDE:D                     0.102          servoXDirectin/PWMPERIOD_8
+    ----------------------------------------
+    Total                      3.468ns (1.162ns logic, 2.306ns route)
+                                       (33.5% logic, 66.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'servoXDirectin/CLOK100kHZ/qs'
+  Clock period: 3.564ns (frequency: 280.568MHz)
+  Total number of paths / destination ports: 198 / 13
+-------------------------------------------------------------------------
+Delay:               3.564ns (Levels of Logic = 3)
+  Source:            servoXDirectin/COUNT_10 (FF)
+  Destination:       servoXDirectin/COUNT_7 (FF)
+  Source Clock:      servoXDirectin/CLOK100kHZ/qs rising
+  Destination Clock: servoXDirectin/CLOK100kHZ/qs rising
+
+  Data Path: servoXDirectin/COUNT_10 to servoXDirectin/COUNT_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   0.912  servoXDirectin/COUNT_10 (servoXDirectin/COUNT_10)
+     LUT3:I0->O            1   0.205   0.580  servoXDirectin/n0000_inv_SW0 (N2)
+     LUT6:I5->O           12   0.205   0.909  servoXDirectin/n0000_inv (servoXDirectin/n0000_inv)
+     LUT2:I1->O            1   0.205   0.000  servoXDirectin/COUNT_7_rstpot (servoXDirectin/COUNT_7_rstpot)
+     FD:D                      0.102          servoXDirectin/COUNT_7
+    ----------------------------------------
+    Total                      3.564ns (1.164ns logic, 2.400ns route)
+                                       (32.7% logic, 67.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'servoZDirectin/CLOK10HZ/qs'
+  Clock period: 3.468ns (frequency: 288.330MHz)
+  Total number of paths / destination ports: 77 / 9
+-------------------------------------------------------------------------
+Delay:               3.468ns (Levels of Logic = 3)
+  Source:            servoZDirectin/PWMPERIOD_8 (FF)
+  Destination:       servoZDirectin/PWMPERIOD_8 (FF)
+  Source Clock:      servoZDirectin/CLOK10HZ/qs rising
+  Destination Clock: servoZDirectin/CLOK10HZ/qs rising
+
+  Data Path: servoZDirectin/PWMPERIOD_8 to servoZDirectin/PWMPERIOD_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.447   1.147  servoZDirectin/PWMPERIOD_8 (servoZDirectin/PWMPERIOD_8)
+     LUT6:I1->O            1   0.203   0.580  servoZDirectin/Maccum_PWMPERIOD_cy<5>12_SW5_F (N60)
+     LUT3:I2->O            1   0.205   0.580  servoZDirectin/Maccum_PWMPERIOD_cy<5>12_SW51 (N46)
+     LUT6:I5->O            1   0.205   0.000  servoZDirectin/Maccum_PWMPERIOD_xor<8>11 (servoZDirectin/Result<8>)
+     FDE:D                     0.102          servoZDirectin/PWMPERIOD_8
+    ----------------------------------------
+    Total                      3.468ns (1.162ns logic, 2.306ns route)
+                                       (33.5% logic, 66.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'servoZDirectin/CLOK100kHZ/qs'
+  Clock period: 3.564ns (frequency: 280.568MHz)
+  Total number of paths / destination ports: 198 / 13
+-------------------------------------------------------------------------
+Delay:               3.564ns (Levels of Logic = 3)
+  Source:            servoZDirectin/COUNT_10 (FF)
+  Destination:       servoZDirectin/COUNT_7 (FF)
+  Source Clock:      servoZDirectin/CLOK100kHZ/qs rising
+  Destination Clock: servoZDirectin/CLOK100kHZ/qs rising
+
+  Data Path: servoZDirectin/COUNT_10 to servoZDirectin/COUNT_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               4   0.447   0.912  servoZDirectin/COUNT_10 (servoZDirectin/COUNT_10)
+     LUT3:I0->O            1   0.205   0.580  servoZDirectin/n0000_inv_SW0 (N4)
+     LUT6:I5->O           12   0.205   0.909  servoZDirectin/n0000_inv (servoZDirectin/n0000_inv)
+     LUT2:I1->O            1   0.205   0.000  servoZDirectin/COUNT_7_rstpot (servoZDirectin/COUNT_7_rstpot)
+     FD:D                      0.102          servoZDirectin/COUNT_7
+    ----------------------------------------
+    Total                      3.564ns (1.164ns logic, 2.400ns route)
+                                       (32.7% logic, 67.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'servoBullet/CLOK100kHZ/qs'
+  Clock period: 3.532ns (frequency: 283.134MHz)
+  Total number of paths / destination ports: 196 / 14
+-------------------------------------------------------------------------
+Delay:               3.532ns (Levels of Logic = 3)
+  Source:            servoBullet/COUNT_10 (FF)
+  Destination:       servoBullet/COUNT_7 (FF)
+  Source Clock:      servoBullet/CLOK100kHZ/qs rising
+  Destination Clock: servoBullet/CLOK100kHZ/qs rising
+
+  Data Path: servoBullet/COUNT_10 to servoBullet/COUNT_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.879  servoBullet/COUNT_10 (servoBullet/COUNT_10)
+     LUT3:I0->O            1   0.205   0.580  servoBullet/n0000_inv_SW0 (N8)
+     LUT6:I5->O           12   0.205   0.909  servoBullet/n0000_inv (servoBullet/n0000_inv)
+     LUT2:I1->O            1   0.205   0.000  servoBullet/COUNT_7_rstpot (servoBullet/COUNT_7_rstpot)
+     FD:D                      0.102          servoBullet/COUNT_7
+    ----------------------------------------
+    Total                      3.532ns (1.164ns logic, 2.368ns route)
+                                       (33.0% logic, 67.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'servoXDirectin/CLOK10HZ/qs'
+  Total number of paths / destination ports: 36 / 17
+-------------------------------------------------------------------------
+Offset:              4.466ns (Levels of Logic = 4)
+  Source:            Xdirection<0> (PAD)
+  Destination:       servoXDirectin/PWMPERIOD_8 (FF)
+  Destination Clock: servoXDirectin/CLOK10HZ/qs rising
+
+  Data Path: Xdirection<0> to servoXDirectin/PWMPERIOD_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.222   1.369  Xdirection_0_IBUF (Xdirection_0_IBUF)
+     LUT6:I0->O            1   0.203   0.580  servoXDirectin/Maccum_PWMPERIOD_cy<5>12_SW5_F (N56)
+     LUT3:I2->O            1   0.205   0.580  servoXDirectin/Maccum_PWMPERIOD_cy<5>12_SW51 (N36)
+     LUT6:I5->O            1   0.205   0.000  servoXDirectin/Maccum_PWMPERIOD_xor<8>11 (servoXDirectin/Result<8>)
+     FDE:D                     0.102          servoXDirectin/PWMPERIOD_8
+    ----------------------------------------
+    Total                      4.466ns (1.937ns logic, 2.529ns route)
+                                       (43.4% logic, 56.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'servoZDirectin/CLOK10HZ/qs'
+  Total number of paths / destination ports: 39 / 17
+-------------------------------------------------------------------------
+Offset:              4.511ns (Levels of Logic = 4)
+  Source:            Zdirection<0> (PAD)
+  Destination:       servoZDirectin/PWMPERIOD_8 (FF)
+  Destination Clock: servoZDirectin/CLOK10HZ/qs rising
+
+  Data Path: Zdirection<0> to servoZDirectin/PWMPERIOD_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.222   1.414  Zdirection_0_IBUF (Zdirection_0_IBUF)
+     LUT6:I0->O            1   0.203   0.580  servoZDirectin/Maccum_PWMPERIOD_cy<5>12_SW5_F (N60)
+     LUT3:I2->O            1   0.205   0.580  servoZDirectin/Maccum_PWMPERIOD_cy<5>12_SW51 (N46)
+     LUT6:I5->O            1   0.205   0.000  servoZDirectin/Maccum_PWMPERIOD_xor<8>11 (servoZDirectin/Result<8>)
+     FDE:D                     0.102          servoZDirectin/PWMPERIOD_8
+    ----------------------------------------
+    Total                      4.511ns (1.937ns logic, 2.574ns route)
+                                       (42.9% logic, 57.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'servoBullet/CLOK100kHZ/qs'
+  Total number of paths / destination ports: 2 / 1
+-------------------------------------------------------------------------
+Offset:              4.484ns (Levels of Logic = 2)
+  Source:            servoBullet/spwm_1 (FF)
+  Destination:       Servo<2> (PAD)
+  Source Clock:      servoBullet/CLOK100kHZ/qs rising
+
+  Data Path: servoBullet/spwm_1 to Servo<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.684  servoBullet/spwm_1 (servoBullet/spwm_1)
+     LUT3:I1->O            1   0.203   0.579  servoBullet/Mmux_Qpwm11 (Servo_2_OBUF)
+     OBUF:I->O                 2.571          Servo_2_OBUF (Servo<2>)
+    ----------------------------------------
+    Total                      4.484ns (3.221ns logic, 1.263ns route)
+                                       (71.8% logic, 28.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'servoZDirectin/CLOK100kHZ/qs'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            servoZDirectin/spwm (FF)
+  Destination:       Servo<1> (PAD)
+  Source Clock:      servoZDirectin/CLOK100kHZ/qs rising
+
+  Data Path: servoZDirectin/spwm to Servo<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  servoZDirectin/spwm (servoZDirectin/spwm)
+     OBUF:I->O                 2.571          Servo_1_OBUF (Servo<1>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'servoXDirectin/CLOK100kHZ/qs'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            servoXDirectin/spwm (FF)
+  Destination:       Servo<0> (PAD)
+  Source Clock:      servoXDirectin/CLOK100kHZ/qs rising
+
+  Data Path: servoXDirectin/spwm to Servo<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  servoXDirectin/spwm (servoXDirectin/spwm)
+     OBUF:I->O                 2.571          Servo_0_OBUF (Servo<0>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               5.385ns (Levels of Logic = 3)
+  Source:            Bullet (PAD)
+  Destination:       Servo<2> (PAD)
+
+  Data Path: Bullet to Servo<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.808  Bullet_IBUF (Bullet_IBUF)
+     LUT3:I0->O            1   0.205   0.579  servoBullet/Mmux_Qpwm11 (Servo_2_OBUF)
+     OBUF:I->O                 2.571          Servo_2_OBUF (Servo<2>)
+    ----------------------------------------
+    Total                      5.385ns (3.998ns logic, 1.387ns route)
+                                       (74.2% logic, 25.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    3.809|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock servoBullet/CLOK100kHZ/qs
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+servoBullet/CLOK100kHZ/qs|    3.532|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock servoXDirectin/CLOK100kHZ/qs
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+servoXDirectin/CLOK100kHZ/qs|    3.564|         |         |         |
+servoXDirectin/CLOK10HZ/qs  |    2.349|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock servoXDirectin/CLOK10HZ/qs
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+servoXDirectin/CLOK10HZ/qs|    3.468|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock servoZDirectin/CLOK100kHZ/qs
+----------------------------+---------+---------+---------+---------+
+                            | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------+---------+---------+---------+---------+
+servoZDirectin/CLOK100kHZ/qs|    3.564|         |         |         |
+servoZDirectin/CLOK10HZ/qs  |    2.373|         |         |         |
+----------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock servoZDirectin/CLOK10HZ/qs
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+servoZDirectin/CLOK10HZ/qs|    3.468|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.46 secs
+ 
+--> 
+
+Total memory usage is 4485880 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\Digital Project\FPGA2\FPGA2.ncd
+OUTFILE=D:\Digital Project\FPGA2\FPGA2.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=D:\Digital Project\FPGA2
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,31 @@
+
+NET "CLK" LOC = P123;
+NET "Xdirection[0]" LOC = P118;
+NET "Xdirection[1]" LOC = P119;
+NET "Zdirection[0]" LOC = P120;
+NET "Zdirection[1]" LOC = P121;
+NET "Bullet" LOC = P116;
+NET "Servo[0]" LOC = P23;
+NET "Servo[2]" LOC = P24;
+NET "Servo[1]" LOC = P1;
+NET "switch_motor" LOC = P117;
+NET "motor[0]" LOC = P2;
+NET "motor[1]" LOC = P143;
+
+#NET "up" LOC = P23;
+#NET "down" LOC = P21;
+#NET "right" LOC = P16;
+#NET "left" LOC = P14;
+#NET "Switch" LOC = P11;
+#NET "release" LOC = P9;
+#NET "o_up" LOC = P24;
+#NET "o_down" LOC = P22;
+#NET "o_right" LOC = P17;
+#NET "o_left" LOC = P15;
+#NET "o_switch" LOC = P12;
+#NET "o_release" LOC = P10;
+
+
+
+# PlanAhead Generated physical constraints 
+

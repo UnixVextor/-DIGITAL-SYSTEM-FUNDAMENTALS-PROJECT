@@ -1,0 +1,5 @@
+vhdl work "div2MHZ.vhd"
+vhdl work "div200Hz.vhd"
+vhdl work "servo_pwm.vhd"
+vhdl work "servo_bullet.vhd"
+vhdl work "FPGA2.vhd"

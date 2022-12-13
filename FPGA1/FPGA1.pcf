@@ -1,0 +1,25 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Dec 11 20:27:44 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "Switch" LOCATE = SITE "P11" LEVEL 1;
+COMP "o_switch" LOCATE = SITE "P12" LEVEL 1;
+COMP "o_right" LOCATE = SITE "P17" LEVEL 1;
+COMP "o_release" LOCATE = SITE "P10" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "P82" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "P81" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "P80" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "P79" LEVEL 1;
+COMP "LED<4>" LOCATE = SITE "P78" LEVEL 1;
+COMP "up" LOCATE = SITE "P23" LEVEL 1;
+COMP "LED<5>" LOCATE = SITE "P75" LEVEL 1;
+COMP "release" LOCATE = SITE "P9" LEVEL 1;
+COMP "right" LOCATE = SITE "P16" LEVEL 1;
+COMP "left" LOCATE = SITE "P14" LEVEL 1;
+COMP "down" LOCATE = SITE "P21" LEVEL 1;
+COMP "o_left" LOCATE = SITE "P15" LEVEL 1;
+COMP "o_down" LOCATE = SITE "P22" LEVEL 1;
+COMP "o_up" LOCATE = SITE "P24" LEVEL 1;
+SCHEMATIC END;
+

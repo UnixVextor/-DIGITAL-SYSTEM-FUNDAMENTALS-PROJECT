@@ -1,0 +1,148 @@
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 
+xst -intstyle ise -ifn "D:/Digital Project/FPGA2/FPGA2.xst" -ofn "D:/Digital Project/FPGA2/FPGA2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc FPGA2.ucf -p xc6slx9-tqg144-3 "FPGA2.ngc" FPGA2.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o FPGA2_map.ncd FPGA2.ngd FPGA2.pcf 
+par -w -intstyle ise -ol high -mt off FPGA2_map.ncd FPGA2.ncd FPGA2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml FPGA2.twx FPGA2.ncd -o FPGA2.twr FPGA2.pcf -ucf FPGA2.ucf 
+bitgen -intstyle ise -f FPGA2.ut FPGA2.ncd 

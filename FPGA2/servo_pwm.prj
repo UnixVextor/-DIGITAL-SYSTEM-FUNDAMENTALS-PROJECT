@@ -1,0 +1,3 @@
+vhdl work "div2MHZ.vhd"
+vhdl work "div200Hz.vhd"
+vhdl work "servo_pwm.vhd"

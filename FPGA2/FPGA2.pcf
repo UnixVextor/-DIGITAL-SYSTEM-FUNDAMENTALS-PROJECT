@@ -1,0 +1,19 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun Dec 11 22:39:20 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CLK" LOCATE = SITE "P123" LEVEL 1;
+COMP "Zdirection<0>" LOCATE = SITE "P120" LEVEL 1;
+COMP "Zdirection<1>" LOCATE = SITE "P121" LEVEL 1;
+COMP "Xdirection<0>" LOCATE = SITE "P118" LEVEL 1;
+COMP "Xdirection<1>" LOCATE = SITE "P119" LEVEL 1;
+COMP "Servo<0>" LOCATE = SITE "P23" LEVEL 1;
+COMP "Servo<1>" LOCATE = SITE "P1" LEVEL 1;
+COMP "Servo<2>" LOCATE = SITE "P24" LEVEL 1;
+COMP "Bullet" LOCATE = SITE "P116" LEVEL 1;
+COMP "switch_motor" LOCATE = SITE "P117" LEVEL 1;
+COMP "motor<0>" LOCATE = SITE "P2" LEVEL 1;
+COMP "motor<1>" LOCATE = SITE "P143" LEVEL 1;
+SCHEMATIC END;
+
